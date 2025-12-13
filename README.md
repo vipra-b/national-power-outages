@@ -57,7 +57,7 @@ The data cleaning process involved several steps to prepare the dataset for anal
 
 4. **Missing value standardization**: Replaced various missing value indicators (empty strings, 'N/A', 'n/a', 'NA', 'null', 'NULL', 'None') with proper NaN values.
 
-5. **Column dropping**:
+5. **Column creation**:
    - Created `PRICE_DIFF` = `RES.PRICE` - `IND.PRICE` to capture price differentials
    - Created `GDP_CONTR` = `UTIL.CONTRI` × `PC.REALGSP.STATE` to capture economic contribution
    - Created `SEASON` from `MONTH` to categorize outages by season
@@ -216,7 +216,6 @@ Do power outages last longer in winter compared to summer?
 
 The two-sample t-test yielded a test statistic of -2.1438 and a p-value of 0.0323, leading us to reject the null hypothesis. There is statistically significant evidence that outage duration differs between summer and winter, with winter outages tending to be longer than summer outages.
 
-*Note: This conclusion is based on statistical evidence from our sample. We cannot prove with absolute certainty that winter outages are always longer, but we have evidence suggesting a difference in the populations.*
 
 <iframe
   src="assets/summer_winter_histogram.html"

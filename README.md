@@ -276,9 +276,9 @@ On the test set, the final model achieved an MAE of 41.74 hours, RMSE of 142.18 
 
 **Evaluation Metric:** RMSE (Root Mean Squared Error)
 
-**Why this metric:** Since we built a regression model, we use RMSE rather than classification metrics. RMSE measures the average magnitude of prediction errors, which is appropriate for understanding fairness in regression contexts.
+**Why:** RMSE for regression
 
-### Hypotheses
+### Hypothesess
 
 - **H₀:** The model is fair. RMSE for rural and urban areas are roughly the same, and any differences are due to random chance.
 - **H₁:** The model is unfair. RMSE for rural areas is higher than RMSE for urban areas (i.e., the model performs worse for rural areas).
